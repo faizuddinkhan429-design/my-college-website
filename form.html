@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admission Form</title>
+  <style>
+    body { background:#e8eef7; font-family:"Times New Roman", serif; }
+    form {
+      width: 420px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border: 2px solid #003366;
+      border-radius: 10px;
+    }
+    h2 { text-align:center; color:#003366; }
+    label { display:block; margin-top:12px; font-weight:bold; }
+    input[type="text"], input[type="email"], input[type="date"], select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid gray;
+      box-sizing: border-box;
+    }
+    input:focus, select:focus, textarea:focus {
+      background-color: #ffffcc;
+      border-color: blue;
+      outline: none;
+    }
+    input:hover { border-color: green; }
+    label:first-of-type { margin-top: 0; }
+    input[type="submit"] {
+      margin-top: 15px;
+      padding: 10px 25px;
+      background: #003366;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover { background: darkred; }
+    input:required:invalid { border-left: 4px solid red; }
+    input:required:valid   { border-left: 4px solid green; }
+  </style>
+</head>
+<body>
+  <form>
+    <h2>Admission Form</h2>
+    <label>Student Name</label>
+    <input type="text" required>
+    <label>Email</label>
+    <input type="email" required>
+    <label>Date of Birth</label>
+    <input type="date">
+    <label>Course</label>
+    <select><option>BCA</option><option>BBA</option><option>MCA</option></select>
+    <label>Address</label>
+    <textarea rows="3"></textarea>
+    <input type="submit" value="Apply Now">
+  </form>
+</body>
+</html>
